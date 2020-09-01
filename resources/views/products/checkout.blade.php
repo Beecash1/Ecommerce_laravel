@@ -41,18 +41,15 @@
                             <div class="form-group"> 
                             <input type="text" name="billing_state" id="billing_state" @if(!empty($userDetails->state))value="{{$userDetails->state}}" @endif placeholder="Billing State" class="form-control"/>
                             </div>
-                            <div class="form-group"> 
                            
-                            <select name="billing_country" id="billing_country">Select Country
-							<option>Select Country</option>
-							@foreach($countries as $country)
-							<option value="{{$country->name}}"@if(!empty($userDetails->country) && $country->name == $userDetails->country)selected @endif>{{$country->name}}</option>
-							@endforeach
-						</select>
+                            <div class="form-group"> 
+                            <input type="text" name="billing_country" id="billing_country" @if(!empty($userDetails->country))value="{{$userDetails->country}}"@endif placeholder="Billing Country" class="form-control"/>
                             </div>
+
                             <div class="form-group"> 
                             <input type="text" name="billing_pincode" id="billing_pincode" @if(!empty($userDetails->pincode))value="{{$userDetails->pincode}}"@endif placeholder="Billing Pincode" class="form-control"/>
                             </div>
+
                             <div class="form-group"> 
                             <input type="text" name="billing_mobile" id="billing_mobile" @if(!empty($userDetails->mobile))value="{{$userDetails->mobile}}" @endif       placeholder="Billing Mobile" class="form-control"/>
                             
@@ -75,6 +72,8 @@
                 <option value="FedEx">Sea Cargo</option>
                 </select>           
                 </div>
+
+               
 
 <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">

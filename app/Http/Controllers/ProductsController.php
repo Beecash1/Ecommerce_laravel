@@ -531,7 +531,7 @@ class ProductsController extends Controller
         $user_id = Auth::user()->id;
         $user_email=Auth::user()->email;
         $userDetails = User::find($user_id);
-        $countries = Country::get();
+        // $countries = Country::get();
 
         //Check if Shipping address exists
 
@@ -591,7 +591,7 @@ class ProductsController extends Controller
 
            
         }
-        return view('products.checkout')->with(compact('userDetails','countries','shippingDetails'));
+        return view('products.checkout')->with(compact('userDetails','shippingDetails'));
     }
 
 
