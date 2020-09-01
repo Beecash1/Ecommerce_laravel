@@ -13,7 +13,7 @@ class CreateDeliveryAddressTable extends Migration
      */
     public function up()
     {
-        Schema::create('delivery_address', function (Blueprint $table) {
+        Schema::create('delivery_addresses', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
             $table->string('user_email');
@@ -24,6 +24,7 @@ class CreateDeliveryAddressTable extends Migration
             $table->string('country');
             $table->string('pincode');
             $table->string('mobile');
+            $table->string('vat');
             $table->timestamps();
         });
     }
@@ -35,6 +36,6 @@ class CreateDeliveryAddressTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('delivery_address');
+        Schema::dropIfExists('delivery_addresses');
     }
 }

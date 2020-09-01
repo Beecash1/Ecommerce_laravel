@@ -2,7 +2,7 @@
 @section('content')
 
 
-<section id="form"><!--form-->
+<section id="form" style="margin-top:20px;"><!--form-->
 
 		<div class="container">
                 <div class="breadcrumbs">
@@ -65,7 +65,8 @@
                 <div class="form-group"> 
                 <label for="">Shipping Method</label>
                 <select name="Payment Method" id="">Payment Method
-                <option value="DHL"> <img src="img/frontend_images/dhl.png" width="24px;"height="24px;" >  DHL</option>
+                <option value="DHL"> <img src="img/dhl.png" width="24px;"height="24px;" >  DHL</option>
+               
                 <option value="FedEx">FedEx</option>
                 <option value="FedEx">Aramex</option>
                 <option value="FedEx">TNT</option>
