@@ -2537,3 +2537,12 @@ h2.title {
 }
 
 
+/* media query */
+@media screen and (min-width: 480px) {
+ .carousel-inner,input{
+   width: 50px;
+   float:left;
+ }
+}
+
+

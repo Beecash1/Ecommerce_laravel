@@ -96,7 +96,7 @@
 						</div>
 
 						<div class="col-sm-7">
-							<form method="post" name="addtocartForm" id="addtocartForm" action="{{url('add-cart')}}" >{{csrf_field()}}
+							<form method="post" name="addtocartForm" id="addtocartForm"  action="{{url('add-cart')}}" >{{csrf_field()}}
 							<input type="hidden" name="product_id" value="{{$productDetails->id}}">
 							<input type="hidden" name="product_name" value="{{$productDetails->product_name}}">
 							<input type="hidden" name="product_code" value="{{$productDetails->product_code}}">
@@ -106,8 +106,10 @@
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2> {{$productDetails->product_name}}</h2>
                                 <p>Product Code: {{$productDetails->product_code}}</p>
-                                <p> <select id="selSize" name="size" style="width:150px;">
-                                    <option value="Select Size">Select Size</option>
+                                <p> 
+									
+								<select id="selSize" name="size" style="width:150px;" required>
+                                    <option value="">Select Size</option>
                                     @foreach($productDetails->attributes as $att)
                                     <option value="{{$productDetails->id}}-{{$att->size}}">{{$att->size}}</option>
                                     @endforeach

@@ -254,6 +254,9 @@ mobile:{
 	});
 
 
+	
+
+
 	//check password
 	$("#current_pwd").keyup(function(){
 		var current_pwd = $(this).val();
