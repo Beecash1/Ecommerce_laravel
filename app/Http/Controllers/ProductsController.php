@@ -705,4 +705,8 @@ class ProductsController extends Controller
         // echo "<pre>";print_r($orderDetails);die;
         return view ('admin.user.user_order')->with(compact('orderDetails'));
     }
+
+    public function contact(){
+        return view('contact');
+    }
 }

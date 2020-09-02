@@ -91,7 +91,7 @@ $mainCategories = Controller::mainCategories();
                                    
                                 </li> 
 								
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="{{asset('/contact')}}">Contact</a></li>
 							</ul>
 							
 						</div>

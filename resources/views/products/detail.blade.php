@@ -188,12 +188,12 @@
 							@foreach($relatedProducts->chunk(3) as $chunk)
 							<div <?php if($count==1){ ?> class="item active" <?php } else { ?> class="item" <?php } ?>>
 							@foreach($chunk as $item)	
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img style="width:200;" src="{{asset( 'img/backend_images/products/small/'.$item->image) }}" alt="" />
-													<h2>RS {{ $item->price }}</h2>
+													<h2>$ {{ $item->price }}</h2>
 													<p>{{ $item->product_name }}</p>
 													<a href="{{ url('/product/'.$item->id) }}"><button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button></a>
 												</div>

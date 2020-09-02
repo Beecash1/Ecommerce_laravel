@@ -144,3 +144,5 @@ Route::post('/wholesale-signin','WholesaleController@login');
 
 
 Route::get('/logout','AdminController@logout');
+
+Route::get('/contact','ProductsController@contact');
